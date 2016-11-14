@@ -4,6 +4,7 @@
 [![npm](http://img.shields.io/npm/v/slackbots.svg?style=flat)](https://www.npmjs.com/package/slackbots)
 
 This is Node.js library for easy operation with Slack API.
+This version is a fork of [mishk0's slackbots](https://github.com/mishk0/slack-bot-api) that adds a `getUserByEmail` method & is dependent on lodash.
 
 It also exposes all opportunities of <a href="https://api.slack.com/rtm">Slack's Real Time Messaging API</a>.
 
@@ -29,12 +30,12 @@ npm install slackbots
 - `getChannel(name)` (return: promise) - gets channel by name,
 - `getGroup(name)` (return: promise) - gets group by name,
 - `getUser(name)` (return: promise) - gets user by name,
+- `getUserByEmail(name)` (return: promise) - gets user by name,
 - `getChannelId(name)` (return: promise) - gets channel ID by name,
 - `getGroupId(name)` (return: promise) - gets group ID by name,
 - `getUserId(name)` (return: promise) - gets user ID by name,
 - `getChatId(name)` (return: promise) - it returns or opens and returns a direct message channel ID,
 - `postMessage(id, text, params)` (return: promise) - posts a message to channel | group | user by ID,
-- `updateMessage(channelId, timestamp, text, params)` (return: promise) - updates a message in a channel,
 - `postTo(name, message [, params, callback])` (return: promise) - posts a message to channel | group | user by name,
 - `postMessageToUser(name, message [, params, callback])` (return: promise) - posts a direct message by user name,
 - `postMessageToGroup(name, message [, params, callback])` (return: promise) - posts a message to private group by name,

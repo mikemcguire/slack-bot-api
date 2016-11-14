@@ -1,6 +1,6 @@
 {
   "name": "slackbots",
-  "version": "0.5.3",
+  "version": "0.5.4-Forked",
   "description": "Simple API for Slack",
   "main": "index.js",
   "author": {
@@ -29,6 +29,7 @@
     "chai": "^2.3.0",
     "jscs": "^1.13.1",
     "jshint": "^2.8.0",
+    "lodash": "^4.17.0",
     "mocha": "^2.2.5",
     "sinon": "^1.14.1",
     "sinon-chai": "^2.8.0"

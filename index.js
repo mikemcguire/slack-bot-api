@@ -4,6 +4,7 @@ var extend = require('extend');
 var WebSocket = require('ws');
 var util = require('util');
 var utils = require('./libs/utils.js');
+var _ = require('lodash');
 var find = utils.find;
 var assert = utils.assert;
 var EventEmitter = require('events').EventEmitter;
@@ -111,6 +112,18 @@ Bot.prototype.getUser = function(name) {
         return find(data.members, { name: name });
     });
 };
+
+/**
+ * Get user by email
+ * @param {string} email
+ * @returns {object}
+ */
+Bot.prototype.getUserByEmail = function(email) {
+    return this.getUsers().then(function(data) {
+        return _.find(data.members, { profile: { email: email } })
+    });
+};
+
 
 /**
  * Get channel by name
